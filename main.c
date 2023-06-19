@@ -39,7 +39,7 @@ int main()
         while(partie == 0)
         {
             char lettre = demandeLettre();   //demande une lettre à l'utilisateur
-            partie = compareMot(lettre, mot, &pendu, &erreurs, size);   //modifie le nombre d'erreurs, et le pendu accordément
+            partie = compareMot(lettre, mot, pendu, &erreurs, size);   //modifie le nombre d'erreurs, et le pendu accordément
             afficherPendu(pendu, erreurs, partie);  //affiche les informations nécessaires au joueur
         }
 
