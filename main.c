@@ -8,9 +8,9 @@
 
 int main()
 {
-    int erreurs;
-    int partie;
-    int size;
+    int erreurs; //nombre d'erreurs de l'utilisateur
+    int partie;  //0 si la partie continue, -1 défaite, 1 victoire
+    int size;  //taille du mot
 
     bool keepPlaying = true;
 
@@ -22,22 +22,22 @@ int main()
         partie = 0;
         size = 0;
 
-        mot = demandeMot();
+        mot = demandeMot();  //récupération du mot dans le dictionnaire
 
-        while (*mot[size] != '\0') {
+        while (*mot[size] != '\0') {  //détermaination de la taille du mot
             size++;
         }
 
 
-        char pendu[size] = {'_'};
+        char pendu[size] = {'_'};   //création d'une chaine de caractères de la longueur du mot avec '_' comme valeur initiale
 
         while(partie == 0)
         {
-            char lettre = demandeLettre();
-            partie = compareMot(lettre, mot, &pendu, &erreurs, size);
-            afficherPendu(pendu, erreurs, partie, size);
+            char lettre = demandeLettre();   //demande une lettre à l'utilisateur
+            partie = compareMot(lettre, mot, &pendu, &erreurs, size);   //modifie le nombre d'erreurs, et le pendu accordément
+            afficherPendu(pendu, erreurs, partie);  //affiche les informations nécessaires au joueur
         }
-        free(mot)
+        free(mot)  //gestion mémoire
         free(pendu)
         //keepPlaying = demandeContinuer();
     }
