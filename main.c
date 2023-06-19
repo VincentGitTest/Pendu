@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "interfaceUtilisateur.h"
 #include "dictionnaire.h"
@@ -9,17 +10,23 @@ int main()
 {
     int MAX_SIZE = 25;
 
+    int erreurs;
+    int partie;
+    int size;
+
     bool keepPlaying = true;
 
-    while(keepPlaying==true)
+    char* mot;
+
+    while(keepPlaying)
     {
-        int erreurs = 0;
-        int partie = 0;
-        int size = 0;
+        erreurs = 0;
+        partie = 0;
+        size = 0;
 
-        char* mot = demandeMot();
+        mot = demandeMot();
 
-        while (mot[size] != '\0') {
+        while (*mot[size] != '\0') {
             size++;
         }
 
@@ -34,5 +41,5 @@ int main()
         }
         //bool keepPlaying = demandeContinuer();
     }
-        return 0;
+    return 0;
 }
