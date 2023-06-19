@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 #include "interfaceUtilisateur.h"
-#include "dictionnaire.h"
+#include "dictionnaire/dictionnaire.h"
 #include "process.h"
 
 int main()
@@ -29,7 +29,12 @@ int main()
         }
 
 
-        char pendu[size] = {'_'};   //création d'une chaine de caractères de la longueur du mot avec '_' comme valeur initiale
+        char* pendu = (char*)calloc(size, sizeof(char));   //création d'une chaine de caractères de la longueur du mot avec '_' comme valeur initiale
+
+        for (int i = 0; i < size; i++)
+        {
+            pendu[i] = '_';
+        }
 
         while(partie == 0)
         {
@@ -37,8 +42,7 @@ int main()
             partie = compareMot(lettre, mot, &pendu, &erreurs, size);   //modifie le nombre d'erreurs, et le pendu accordément
             afficherPendu(pendu, erreurs, partie);  //affiche les informations nécessaires au joueur
         }
-        free(mot)  //gestion mémoire
-        free(pendu)
+
         //keepPlaying = demandeContinuer();
     }
     return 0;
