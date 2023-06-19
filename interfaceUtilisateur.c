@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "interfaceUtilisateur.h"
-
+#include "dictionnaire/dictionnaire.h"
 
 // Cette fonction affiche la pendule
 void affichePendul(char pendu[], int erreurs, int partie)

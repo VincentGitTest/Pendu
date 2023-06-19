@@ -47,7 +47,7 @@ int lireFichier(){
 
 char * demandeMot(){
     /**
-     * return a word among the dictionnary
+     * return a word among thoses of dictionnary
      * 
      * 
      * 
