@@ -16,7 +16,7 @@ void affichePendul(char pendu[], int erreurs, int partie)
         "  +---+\n  |   |\n  O   |\n /|\\  |\n /    |\n      |\n=========\n",
         "  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n=========\n"
     };
-    if(partie == 0)
+    if(partie == 0) // La partie continu
     {
         printf("La partie continue :\n");
         printf("Vous avez fait %d erreur(s).\n",erreurs);
@@ -24,22 +24,22 @@ void affichePendul(char pendu[], int erreurs, int partie)
         printf("Voici le mot avec les lettres qui manquent : \n");
         printf("%s\n",pendu);
     }
-    else if (partie == -1)
+    else if (partie == -1) // La partie est perdue
     {
         printf("Defaite : tu as fait trop d'erreurs.\n");
     }
-    else if (partie == 1)
+    else if (partie == 1) // La partie est gagnee
     {
         printf("Victoire : tu as trouve le mot.\n");
     }
 }
 
+// Cette fonction permet de demander une lettre
 char demandeLettre()
 {
     char lettre;
-    printf("Donner moi une lettre : \n");
+    printf("Donnez moi une lettre : \n");
     scanf("%c", &lettre);
     return lettre;
 }
-
 
