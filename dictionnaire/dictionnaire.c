@@ -1,8 +1,8 @@
 /**
  * This files is proveded to read a .txt file name "gutenberg.txt"
- *  and select randomly a word 
- * 
- * 
+ *  and select randomly a word
+ *
+ *
  * **/
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,14 +14,14 @@ char ** list_of_str;
 int dic_is_loaded=-1;
 int lireFichier(){
     int count =0;
-  
+
     FILE *fp;
     fp=fopen(fr_dico,"r");
     if(fp == NULL){
         perror("dico file not found ");
         exit(1);
     }
-    
+
     int i=0;
     while(1){
 
@@ -37,47 +37,42 @@ int lireFichier(){
             if(sizeof(buff) <40){
                 list_of_str[i]=buff;
             }
-                
+
             i++;
         }
     }
     fclose(fp);
-    
+
     return dic_is_loaded;
 }
 
 char * demandeMot(){
     /**
      * return a word among thoses of dictionnary
-     * 
-     * 
-     * 
+     *
+     *
+     *
      * */
     if(dic_is_loaded==-1){
         int lire=lireFichier();
     }
-    
+
     int rows=sizeof(list_of_str[0]);
     time_t t;
     srand((unsigned) time(&t));
     int pick= rand() % rows + 1;
     return list_of_str[pick];
-    
+
 }
 
 int close_dic(){
     /**
     *close the dictionnary and set the value to -1 for the dic loaded value
-    *  
+    *
     */
     dic_is_loaded=-1;
     free(list_of_str);
     return 0;
 }
 
-int main(){
-    char * mot=demandeMot();
-    printf(mot);
-    close_dic();
-}
 

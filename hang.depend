@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1687185143 source:c:\users\pierreantoine\onedrive\documents\formation\c\hang\pendu\dictionnaire\dictionnaire.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+	"dictionnaire.h"
+
+1687183504 c:\users\pierreantoine\onedrive\documents\formation\c\hang\pendu\dictionnaire\dictionnaire.h
+
+1687184806 source:c:\users\pierreantoine\onedrive\documents\formation\c\hang\pendu\interfaceutilisateur.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"interfaceUtilisateur.h"
+	"dictionnaire/dictionnaire.h"
+
+1687174422 c:\users\pierreantoine\onedrive\documents\formation\c\hang\pendu\interfaceutilisateur.h
+

@@ -24,7 +24,7 @@ int main()
 
         mot = demandeMot();  //récupération du mot dans le dictionnaire
 
-        while (*mot[size] != '\0') {  //détermaination de la taille du mot
+        while (mot[size] != '\0') {  //détermaination de la taille du mot
             size++;
         }
 
@@ -39,7 +39,7 @@ int main()
         while(partie == 0)
         {
             char lettre = demandeLettre();   //demande une lettre à l'utilisateur
-            partie = compareMot(mot, pendu, &erreur);   //modifie le nombre d'erreurs, et le pendu accordément
+            partie = checkword(mot, pendu, &erreurs, lettre);   //modifie le nombre d'erreurs, et le pendu accordément
             afficherPendu(pendu, erreurs, partie);  //affiche les informations nécessaires au joueur
         }
         free(pendu);
