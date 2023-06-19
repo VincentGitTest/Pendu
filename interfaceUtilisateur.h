@@ -29,11 +29,3 @@ char demandeLettre()
     return lettre;
 }
 
-int main()
-{
-    char pendu[] = "tele_hone";
-    int erreur = 3;
-    int partie = 0;
-    affichePendul(pendu,erreur,partie);
-    printf("La lettre donnee est %c",demandeLettre());
-}
