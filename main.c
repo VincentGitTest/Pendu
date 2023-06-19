@@ -8,8 +8,6 @@
 
 int main()
 {
-    int MAX_SIZE = 25;
-
     int erreurs;
     int partie;
     int size;
@@ -37,9 +35,11 @@ int main()
         {
             char lettre = demandeLettre();
             partie = compareMot(lettre, mot, &pendu, &erreurs, size);
-            afficherPendu(&pendu, erreurs, partie, size);
+            afficherPendu(pendu, erreurs, partie, size);
         }
-        //bool keepPlaying = demandeContinuer();
+        free(mot)
+        free(pendu)
+        //keepPlaying = demandeContinuer();
     }
     return 0;
 }
