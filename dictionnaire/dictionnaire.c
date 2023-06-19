@@ -4,10 +4,11 @@
  * 
  * 
  * **/
-#include "stdio.h"
-#include "stdlib.h"
-#include "time.h"
-#include "math.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+#include "dictionnaire.h"
 const char* fr_dico="./gutenberg.txt";
 char ** list_of_str;
 int dic_is_loaded=-1;
