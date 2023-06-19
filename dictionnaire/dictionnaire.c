@@ -9,7 +9,7 @@
 #include <time.h>
 #include <math.h>
 #include "dictionnaire.h"
-const char* fr_dico="./gutenberg.txt";
+const char* fr_dico="./dictionnaire/gutenberg.txt";
 char ** list_of_str;
 int dic_is_loaded=-1;
 int lireFichier(){
